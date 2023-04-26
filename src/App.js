@@ -6,7 +6,7 @@ function App() {
   const dispatch = useDispatch();
 
   //to take state from Redux
-  const cash = useSelector((state) => state.cash);
+  const cash = useSelector((state) => state.cash.cash);
 
   const getCash = (cash) => {
     dispatch({ type: "GET_CASH", payload: cash });
