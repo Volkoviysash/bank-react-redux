@@ -1,38 +1,49 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  background-color: rgb(49, 46, 58);
+}
+
+.App button {
+  border: none;
   color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px rgb(192, 181, 181);
 }
 
-.App-link {
-  color: #61dafb;
+.App button:active {
+  transform: scale(1.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cash-in {
+  background-color: #4caf50; /* Green */
+}
+
+.cash-out {
+  background-color: rgb(189, 84, 84);
+}
+
+.display {
+  background-color: rgb(228, 221, 221);
+  min-width: 200px;
+  width: auto;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  padding: 1px 15px;
+  margin: 2px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px rgb(192, 181, 181);
 }
