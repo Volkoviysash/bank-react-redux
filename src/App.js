@@ -8,22 +8,28 @@ function App() {
   //to take state from Redux
   const cash = useSelector((state) => state.cash);
 
-  const getCash = () => {
-    dispatch({ type: "GET_CASH", payload: 5 });
+  const getCash = (cash) => {
+    dispatch({ type: "GET_CASH", payload: cash });
   };
 
-  const addCash = () => {
-    dispatch({ type: "ADD_CASH", payload: 5 });
+  const addCash = (cash) => {
+    dispatch({ type: "ADD_CASH", payload: cash });
   };
 
   return (
     <div className="App">
       <div className="display">${cash}</div>
       <div style={{ display: "flex" }}>
-        <button onClick={() => addCash()} className="cash-in">
+        <button
+          onClick={() => addCash(Number(prompt("Enter the amount")))}
+          className="cash-in"
+        >
           Cash IN
         </button>
-        <button onClick={() => getCash()} className="cash-out">
+        <button
+          onClick={() => getCash(Number(prompt("Enter the amount")))}
+          className="cash-out"
+        >
           Cash OUT
         </button>
       </div>
