@@ -5,6 +5,7 @@ import {
   removeCustomerAction,
 } from "./store/customerReducer";
 import { addCashAction, getCashAction } from "./store/cashReducer";
+import { fetchCustomers } from "./asyncActions/customers";
 
 function App() {
   // Create dispatch
@@ -75,10 +76,10 @@ function App() {
           Add Customer
         </button>
         <button
-          onClick={() => getCash(Number(prompt("Enter the amount")))}
+          onClick={() => dispatch(fetchCustomers())}
           className="delete-customer"
         >
-          Delete Customer
+          Get Customers from DB
         </button>
       </div>
     </div>
